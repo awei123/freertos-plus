@@ -1,6 +1,13 @@
 file build/main.elf
 target remote :3333
 
-b main
-
+l main
+b command_prompt
+c
+b main.c:98
+commands
+set buf = "test 2"
+j +1
+next
+end
 c
